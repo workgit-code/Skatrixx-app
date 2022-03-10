@@ -1,0 +1,96 @@
+.profile {color: white;      overflow-y: hidden;}
+
+#profile-card {
+    background-color: #666464;
+    height: 80px;
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: auto; margin-right: auto;
+}
+
+#profile-card img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-left: 5px;
+    border: 1px solid black;
+}
+
+#additional-information {
+    font-size: 25px;
+    margin: 0 auto ;
+    width: 60%;
+}
+
+#additional-information p{
+    margin-bottom: 5px;
+}
+
+#tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #666464;
+    border: 2px solid #666464;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: auto; margin-right: auto; margin-top: 5px; margin-bottom: -15px;
+}
+
+#tabs button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: linear .3s;
+}
+
+#tabs-me {
+    background-color: #CF2121;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#tabs-friends {
+    background-color: #666464;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#me-tab {
+    border:1px solid #666464;
+    border-radius: 10px;
+    width: 95%;
+    height: calc(100vh - 225px);
+    margin-left: auto; margin-right: auto;
+}
+
+#friends-tab {
+    border:1px solid #666464;
+    border-radius: 10px;
+    width: 95%;
+    height: calc(100vh - 230px);
+    margin-left: auto; margin-right: auto;
+}
+
+#gallery-link {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-left: auto; margin-right: auto;
+}
+
+#gallery img {
+    filter: invert(100%) sepia(0%) saturate(7496%) hue-rotate(139deg) brightness(92%) contrast(116%);
+    height: 35px; width: auto;
+}
