@@ -3,24 +3,60 @@ import { Link } from 'react-router-dom'
 
 import "../stylesheets/Profile.css"
 
-import skateImg from "../images/skate-icon.png"
+import userTabImg from "../images/Person.png"
+import friendTabImg from "../images/Friends.png"
+import skateTabImg from "../images/Skateboard.png"
 import profilePicture from "../images/profile-picture.png"
 import ProgressBar from './ProgressBar'
+import ProfileRankings from './ProfileRankings'
+import Achievements from './Achievements'
+import FriendList from './FriendList'
 
 function Profile() {
 
-    const [openedTab, setOpenedTab] = useState('Me');
+    const [openedTab, setOpenedTab] = useState('Friends');
 
     const handleTabChange = (tab) => {
         if(tab === 'Me') {
             document.getElementById('tabs-me').style.backgroundColor = '#CF2121';
-            document.getElementById('tabs-friends').style.backgroundColor = '#666464';
+            document.getElementById('tabs-friends').style.backgroundColor = '#1E1E1E';
+            document.getElementById('tabs-gallery').style.backgroundColor = '#1E1E1E';
             setOpenedTab('Me')
         }
-        else {
-            document.getElementById('tabs-me').style.backgroundColor = '#666464';
+        else if(tab === 'Friends') {
+            document.getElementById('tabs-me').style.backgroundColor = '#1E1E1E';
             document.getElementById('tabs-friends').style.backgroundColor = '#CF2121';
+            document.getElementById('tabs-gallery').style.backgroundColor = '#1E1E1E';
             setOpenedTab('Friends')
+        }
+        else if(tab === 'Gallery') {
+            document.getElementById('tabs-me').style.backgroundColor = '#1E1E1E';
+            document.getElementById('tabs-friends').style.backgroundColor = '#1E1E1E';
+            document.getElementById('tabs-gallery').style.backgroundColor = '#CF2121';
+            setOpenedTab('Gallery')
+        }
+    }
+
+    const displayOpenedTab = () => {
+        if(openedTab === 'Me') {
+            return(
+                <div className='me-tab'>
+                    <ProfileRankings/>
+                    <Achievements/>
+                </div>
+            )
+        }
+        else if(openedTab === 'Friends') {
+            return(
+                <div className='friends-tab'>
+                    <FriendList/>
+                </div>
+            )
+        }
+        else if(openedTab === 'Gallery') {
+            return(
+                <>Gallery</>
+            )
         }
     }
 
@@ -35,25 +71,17 @@ function Profile() {
             </div>
             <div id='tabs'>
                 <button onClick={() => {handleTabChange('Me')}} id='tabs-me'>
-                    Me
+                    <img src={userTabImg} alt=''/>
                 </button>
                 <button onClick={() => {handleTabChange('Friends')}} id='tabs-friends'>
-                    Friends
+                    <img src={friendTabImg}alt=''/>
+                </button>
+                <button onClick={() => {handleTabChange('Gallery')}} id='tabs-gallery'>
+                <img src={skateTabImg}alt=''/>
                 </button>
             </div>
 <br/>
-            {openedTab === 'Me' ?             
-            <div id='me-tab'>
-                <div id='gallery'>
-                    <Link to={"/my-boards"} id={'gallery-link'}>
-                        <p>View Board Gallery</p>
-                        <img src={skateImg} alt='' />
-                    </Link>
-                </div>
-            </div> :
-            <div id='friends-tab'>
-            
-        </div>}
+            {displayOpenedTab()}
         </div>
     )
 }

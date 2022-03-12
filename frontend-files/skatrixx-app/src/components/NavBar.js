@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 import "../stylesheets/NavBar.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import userIcon from "../images/user-icon.png";
 import skateIcon from "../images/skate-icon.png";
-import awardIcon from "../images/award-icon.png";
 
 function NavBar() {
     var btns = document.getElementsByClassName("nav-icon");

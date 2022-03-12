@@ -1,0 +1,45 @@
+.profile-rankings p {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+
+.rankings {
+    display: flex;
+    text-align: center;
+    width: 95%;
+    margin-left: auto; margin-right: auto;
+    justify-content: space-evenly;
+    max-width: 550px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.ranking {
+    width: 100%;
+    display: block;
+    padding: 0 10px;
+    margin: 10px 20px;
+}
+
+.position {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+.category {
+    font-size: 10px;
+    font-style: italic;
+    margin-top: 3px;
+}
+
+
+@media only screen and (max-width: 415px) {
+    .rankings{
+        justify-content: center;
+        
+    }
+    .ranking {
+        margin: 0;
+    }
+  }
