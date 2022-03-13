@@ -1,0 +1,75 @@
+.profile {color: white;      overflow-y: hidden;}
+
+#profile-card {
+    height: max-content;
+    display: block;
+    margin-top: 25px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    width: 90%;
+    margin-left: auto; margin-right: auto;
+    max-width: 800px;
+}
+
+#profile-card img {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    margin-left: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#additional-information {
+    font-size: 25px;
+    margin: 0 auto ;
+    width: 60%;
+}
+
+#additional-information p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1E1E1E;
+    border: 2px solid #1E1E1E;
+    height: 30px;
+    width: 60%;
+    max-width: 500px;
+    border-radius: 150px;
+    margin-left: auto; margin-right: auto; margin-top: -10px;
+}
+
+#tabs button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: linear .3s;
+}
+
+#tabs-me {
+    background-color: #CF2121;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+}
+#tabs-friends {
+    background-color: #1E1E1E;
+}
+#tabs-gallery {
+    background-color: #1E1E1E;
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+
+.friends-tab {
+    height: 100vh
+}

@@ -1,0 +1,59 @@
+.friend-container {
+    position: relative;
+    width: 80%;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+}
+
+#bg-img {
+    max-width: 600px;
+    width: 120%;
+    padding-bottom: 0;
+    height: auto;
+    position: absolute;
+    z-index: 0;
+}
+#friend-name {
+    font-size: 1rem;
+    left: 0; right: 0; top: 0; bottom: 0;
+    z-index: 1;
+    margin-left: 20px;
+}
+
+#friend-img {
+    width: 75px; 
+    height: 75px;
+    border-radius: 50%;
+    margin-left: 20px;
+    z-index: 2;
+}
+
+#friend-info {
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+
+.friend-list {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto; margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    height:110%;
+    overflow-y: scroll;
+
+}
+
+@media screen and (min-width: 320px) {
+    #friend-name {
+      font-size: calc(25px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    #friend-name {
+      font-size: 30px;
+    }
+  }

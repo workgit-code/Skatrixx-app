@@ -1,0 +1,42 @@
+.achievements {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#achievement {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#rotator-wheel {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-left: auto; margin-right: auto;
+    max-width: 550px;
+    height:max-content;
+}
+
+
+.selector{
+    color: white;
+    font-size: 25px;
+    font-weight: 1000;
+    top: 0; bottom: 0;
+    background-color: transparent;
+    height: max-content;
+    border: none;
+    cursor: pointer;
+}
+
+/*#previous-achievement{
+    transform: skew(10deg, 10deg) rotate(-5deg);
+}
+
+#next-achievement{
+    transform: skew(-10deg, -10deg) rotate(5deg);
+}*/
