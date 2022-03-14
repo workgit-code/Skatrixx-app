@@ -1,4 +1,11 @@
-.profile {color: white;      overflow-y: hidden;}
+.profile {
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
 
 #profile-card {
     height: max-content;
@@ -38,7 +45,7 @@
     background-color: #1E1E1E;
     border: 2px solid #1E1E1E;
     height: 30px;
-    width: 60%;
+    width: 70%;
     max-width: 500px;
     border-radius: 150px;
     margin-left: auto; margin-right: auto; margin-top: -10px;
@@ -70,6 +77,14 @@
     border-bottom-right-radius: 150px;
 }
 
-.friends-tab {
-    height: 100vh
+.me-tab{
+    overflow-y: scroll;
+    height: calc(100% - 65px);
+    padding-bottom: 64px; 
 }
+
+ .friends-tab {
+    overflow-y: scroll;
+    height: calc(100% - 65px);
+    padding-bottom: 64px;
+}    

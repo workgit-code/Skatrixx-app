@@ -1,29 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { getFriends } from '../services';
 
 import "../stylesheets/FriendList.css"
 import FriendContainer from './FriendContainer';
 
-function FriendList() {
+function FriendList(props) {
 
-    let friends = [
-        "Matt Stonie",
-        "Steven Rogers",
-        "Го6о Келе6а",
-        "Matt Stonie",
-        "Steven Rogers",
-        "Го6о Келе6а",
-        "Matt Stonie",
-        "Steven Rogers",
-        "Го6о Келе6а",
-        "Matt Stonie",
-        "Steven Rogers",
-        "Го6о Келе6а"
-    ]
+  const [friends, setFriends] = useState(getFriends)
 
   return (
     <div className='friend-list'>
-        {friends.map(friend=> (
-            <FriendContainer name={friend}/>
+      {friends.map(friend=> (
+            <FriendContainer friend={friend}/>
         ))}
     </div>
   )

@@ -8,7 +8,7 @@ function NavBar() {
     var btns = document.getElementsByClassName("nav-icon");
 
     useEffect(() => {
-        setActiveBtn();
+        setActiveBtn2();
     }, []);
 
 
@@ -22,13 +22,31 @@ function NavBar() {
           }
     }
 
+    const setActiveBtn2 = (button) => {
+      if(button === 'Profile') {
+          document.getElementById("trophy").style.color = "white"
+          document.getElementById("profile").style.color = "#CF2121"
+          document.getElementById("skate").style.filter = ""
+      }
+      else if (button === 'Trophy') {
+        document.getElementById("trophy").style.color = "#CF2121"
+        document.getElementById("profile").style.color = "white"
+        document.getElementById("skate").style.filter = ""
+      }
+      else if (button === 'Skate') {
+        document.getElementById("trophy").style.color = "white"
+        document.getElementById("profile").style.color = "white"
+        document.getElementById("skate").style.filter = "saturate(7495%)"
+      }
+  }
+
   return (
     <div className='nav'>
-        <Link to={"/"}><i onClick={setActiveBtn} className='fas fa-trophy nav-icon'></i></Link>
+        <Link to={"/trophy"}><i onClick={() => setActiveBtn2('Trophy')} id="trophy" className='fas fa-trophy nav-icon'></i></Link>
         <div id='center'>
-            <Link to={"/"}><img className={'nav-icon-center'} src={skateIcon} alt=''/></Link>
+            <Link to={"/skate"}><img onClick={() => setActiveBtn2('Skate')} id="skate" className={'nav-icon-center'} src={skateIcon} alt=''/></Link>
         </div>
-        <Link to={"/"}><i onClick={setActiveBtn} className='fas fa-user-alt nav-icon active'></i></Link>
+        <Link to={"/"}><i onClick={() => setActiveBtn2('Profile')} id="profile" className='fas fa-user-alt nav-icon active'></i></Link>
             
             
             

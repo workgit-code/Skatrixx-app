@@ -1,12 +1,13 @@
-import {React, useState} from 'react'
-import { Link } from 'react-router-dom'
+import {React, useState, useEffect} from 'react'
+import {getProfileName, getProfileImage} from "../services"
 
 import "../stylesheets/Profile.css"
 
 import userTabImg from "../images/Person.png"
 import friendTabImg from "../images/Friends.png"
 import skateTabImg from "../images/Skateboard.png"
-import profilePicture from "../images/profile-picture.png"
+import profilePic from "../images/profile-picture.png"
+
 import ProgressBar from './ProgressBar'
 import ProfileRankings from './ProfileRankings'
 import Achievements from './Achievements'
@@ -14,7 +15,13 @@ import FriendList from './FriendList'
 
 function Profile() {
 
-    const [openedTab, setOpenedTab] = useState('Friends');
+    const [profileName, setProfileName] = useState(getProfileName);
+    const [profileImage, setProfileImage] = useState(profilePic)
+    const [openedTab, setOpenedTab] = useState('Me');
+
+    useEffect(() => {
+    }, [])
+    
 
     const handleTabChange = (tab) => {
         if(tab === 'Me') {
@@ -63,10 +70,10 @@ function Profile() {
     return (
         <div className='profile'>
             <div id='profile-card'>
-                <img src={profilePicture} alt='' />
+                <img src={profileImage} alt='' />
                 <div id='additional-information'>
-                    <p>Pedro Ramirez</p>
-                    <ProgressBar />
+                    <p>{profileName}</p>
+                    <ProgressBar/>
                 </div>
             </div>
             <div id='tabs'>

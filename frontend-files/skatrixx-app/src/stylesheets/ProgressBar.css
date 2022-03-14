@@ -13,9 +13,8 @@
     border: 1px solid #1E1E1E;
 }
 
-.red {
+#red {
     background-color: white;
-    width: 64%;
     height: 7px;
     border-radius: 5px;  
 }

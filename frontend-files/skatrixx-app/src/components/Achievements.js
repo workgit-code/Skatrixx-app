@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from 'react'
+import { getProfileAchievements } from '../services'
+
+import badge1 from "../images/badges/Badge2.png"
+import badge2 from "../images/badges/Badge3.png"
+import badge3 from "../images/badges/Badge4.png"
+import badge4 from "../images/badges/Badge5.png"
 
 import "../stylesheets/Achievements.css"
 
-import badge1 from "../images/badges/Badge1.png"
-import badge2 from "../images/badges/Badge2.png"
-import badge3 from "../images/badges/Badge3.png"
-import badge4 from "../images/badges/Badge4.png"
-import badge5 from "../images/badges/Badge5.png"
-import badge6 from "../images/badges/Badge6.png"
 import AchievementContainer from './AchievementContainer'
 
-function Achievements() {
+function Achievements(props) {
 
     const achievements = [
-        0,
-        1,
-        2,
-        3
+        badge1,
+        badge2,
+        badge3,
+        badge4
     ]
-
     const [viewedAchievement, setViewedAchievement]  = useState();
     const [nextAcievement, setNextAchievement] = useState();
     const [prevAcievement, setPrevAchievement] = useState();
     const [viewedAchievementIndex, setViewedAchievementIndex] = useState(0);
 
     useEffect(() => {
+        console.log(achievements)
         if(achievements.length === 1) {
             setViewedAchievement(achievements[0]);
             setPrevAchievement(undefined);
@@ -37,7 +37,7 @@ function Achievements() {
         }
         else {
             setViewedAchievement(achievements[0]);
-            setPrevAchievement(achievements.length - 1);
+            setPrevAchievement(achievements[achievements.length - 1]);
             setNextAchievement(achievements[1]);
         }
       }, []);
@@ -48,11 +48,13 @@ function Achievements() {
                 const newIndex = 0
                 setViewedAchievementIndex(newIndex); 
                 setViewedAchievement(achievements[newIndex]);
+                setPrevNextAchievements(newIndex);
             }
             else {
                 const newIndex = viewedAchievementIndex + 1;
                 setViewedAchievementIndex(newIndex);
                 setViewedAchievement(achievements[newIndex]);
+                setPrevNextAchievements(newIndex);
             }
         }
         else if(position === 'backward') {
@@ -60,12 +62,29 @@ function Achievements() {
                 const newIndex = achievements.length - 1;
                 setViewedAchievementIndex(newIndex); 
                 setViewedAchievement(achievements[newIndex]);
+                setPrevNextAchievements(newIndex);
             }
             else {
                 const newIndex = viewedAchievementIndex - 1;
                 setViewedAchievementIndex(newIndex);
                 setViewedAchievement(achievements[newIndex]);
+                setPrevNextAchievements(newIndex);
             }
+        }
+    }
+
+    const setPrevNextAchievements = (index) => {
+        if(index === 0) {
+            setPrevAchievement(achievements[achievements.length - 1])
+            setNextAchievement(achievements[1])
+        }
+        else if(index === achievements.length - 1) {
+            setPrevAchievement(achievements[index - 1]);
+            setNextAchievement(achievements[0])
+        }
+        else {
+            setPrevAchievement(achievements[index - 1])
+            setNextAchievement(achievements[index + 1])
         }
     }
 
@@ -77,11 +96,12 @@ function Achievements() {
             <div id='previous-achievement'>
                 <AchievementContainer img={prevAcievement}/>
             </div>
-            <AchievementContainer img={viewedAchievement}/>
+            <div id='current-achievement'>
+                <AchievementContainer img={viewedAchievement}/>
+            </div>
             <div id='next-achievement'>
                 <AchievementContainer img={nextAcievement}/>
             </div>
-
             <button className='selector' id='next' onClick={() => {changeAchievement('forward')}}><i className="fa-solid fa-circle-right"></i></button>
         </div>
     </div>
