@@ -1,8 +1,10 @@
 import React from 'react'
+import Loby from "./Loby"
 
 function SkatePage() {
   return (
-    <div>SkatePage</div>
+    <Loby />
+    // <div>SkatePage</div>
   )
 }
 
