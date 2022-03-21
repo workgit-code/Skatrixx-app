@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import Profile from './components/Profile';
 import SkatePage from './components/SkatePage';
 import TrophyPage from './components/TrophyPage';
+import GamePage from './components/GamePage';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
             <Route path={'/'} exact element={<Profile/>}/>
             <Route path={'/skate'} element={<SkatePage/>}/>
             <Route path={'/trophy'} element={<TrophyPage/>}/>
+            <Route path={'/game'} element={<GamePage />}/>
+            
           </Routes>
           <NavBar/>
       </div>
