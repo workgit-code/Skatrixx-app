@@ -1,8 +1,9 @@
 import React from 'react'
+import LevelMenu from './LevelMenu'
 
 function GamePage() {
   return (
-    <div>GamePage</div>
+    <div><LevelMenu/></div>
   )
 }
 
