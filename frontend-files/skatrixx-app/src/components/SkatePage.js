@@ -3,7 +3,7 @@ import Loby from "./Loby"
 
 function SkatePage() {
   return (
-    <Loby />
+    <></>
     // <div>SkatePage</div>
   )
 }

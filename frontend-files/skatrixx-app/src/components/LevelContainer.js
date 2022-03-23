@@ -1,12 +1,16 @@
 import React from 'react'
+import "../stylesheets/LevelContainer.css"
+import PlayIcon from "../images/Play.svg"
 
-function LevelContainer(props) {
+function LevelContainer(props) {  
+  
   return (
-    <div>
-      <p>{props.trick.trickName}</p>
-      <p>{props.trick.xp}</p>
-      
-      
+    <div id='trickList'> 
+    <div className='trick'>
+     <p id="trickName">{props.trick.trickName}</p> 
+      <p id="trickXp">{props.trick.xp}</p>
+      <img src={PlayIcon} id="play"/> 
+    </div>
     </div>
   )
 }

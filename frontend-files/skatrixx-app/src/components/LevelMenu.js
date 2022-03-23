@@ -1,17 +1,23 @@
 import React from 'react'
-import "../stylesheets/LevelMenu.css"
 import LevelList from './LevelList'
+import "../stylesheets/LevelMenu.css"
 
-function LevelMenu() {
+
+function LevelMenu(props) {
     // Use state (hooks)
 
     // Use effect - load levels
 
     // Functions - levels logic
   
-    return ( <div>
-        <div > LevelMenu </div> 
-        <LevelList/>
+    return ( <div className='level-menu'>
+        <p id='back' onClick={() => {props.back('Menu')}}>&lt;</p>
+            <h3>Beginner</h3>
+            <LevelList/>
+            <h3>Intermediate</h3>
+            <LevelList/>
+            <h3>Master</h3>
+            <LevelList/>
         </div>
     )
 }
