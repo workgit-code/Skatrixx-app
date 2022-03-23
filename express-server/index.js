@@ -18,9 +18,10 @@ app.use(express.json())
 
 
 const usersRouter=require('./routes/users')
+const skateDataRouter=require('./routes/skateDatas')
 
 app.use('/users', usersRouter)
-
+app.use('/skateDatas', skateDataRouter)
 
 
 // PORT
