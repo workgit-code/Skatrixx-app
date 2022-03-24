@@ -84,6 +84,10 @@
 }
 
  .friends-tab {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
     overflow-y: scroll;
     height: calc(100% - 65px);
     padding-bottom: 64px;

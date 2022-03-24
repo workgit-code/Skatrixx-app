@@ -18,7 +18,7 @@ const profile = {
     ],
     "friends": [
         {
-            "name" : "pishko Ramirez",
+            "name" : "George",
             "level" : 32,
             "progressToNexLvl" : 28,
             "frRank" : 3,
@@ -27,79 +27,7 @@ const profile = {
             "image" : "./images/profile-picture.png"
         },
         {
-            "name" : "Go6ko Ramirez",
-            "level" : 32,
-            "progressToNexLvl" : 28,
-            "frRank" : 3,
-            "nlRank" : 201,
-            "wrRank" : 11004,
-            "image" : "./images/profile-picture.png"
-        },
-        {
-            "name" : "Stop PLS",
-            "level" : 32,
-            "progressToNexLvl" : 28,
-            "frRank" : 3,
-            "nlRank" : 201,
-            "wrRank" : 11004,
-            "image" : "./images/profile-picture.png"
-        },
-        {
-            "name" : "Stop Ramirez",
-            "level" : 32,
-            "progressToNexLvl" : 28,
-            "frRank" : 3,
-            "nlRank" : 201,
-            "wrRank" : 11004,
-            "image" : "./images/profile-picture.png"
-        },
-        {
-            "name" : "Kill me",
-            "level" : 32,
-            "progressToNexLvl" : 28,
-            "frRank" : 3,
-            "nlRank" : 201,
-            "wrRank" : 11004,
-            "image" : "./images/profile-picture.png"
-        },
-        {
-            "name" : "pishko Ramirez",
-            "level" : 32,
-            "progressToNexLvl" : 28,
-            "frRank" : 3,
-            "nlRank" : 201,
-            "wrRank" : 11004,
-            "image" : "./images/profile-picture.png"
-        },
-        {
-            "name" : "Go6ko Ramirez",
-            "level" : 32,
-            "progressToNexLvl" : 28,
-            "frRank" : 3,
-            "nlRank" : 201,
-            "wrRank" : 11004,
-            "image" : "./images/profile-picture.png"
-        },
-        {
-            "name" : "sheguvam se",
-            "level" : 32,
-            "progressToNexLvl" : 28,
-            "frRank" : 3,
-            "nlRank" : 201,
-            "wrRank" : 11004,
-            "image" : "./images/profile-picture.png"
-        },
-        {
-            "name" : "Ioan Pi6kofv",
-            "level" : 32,
-            "progressToNexLvl" : 28,
-            "frRank" : 3,
-            "nlRank" : 201,
-            "wrRank" : 11004,
-            "image" : "./images/profile-picture.png"
-        },
-        {
-            "name" : "Angel Ta6a4koff",
+            "name" : "Steven",
             "level" : 32,
             "progressToNexLvl" : 28,
             "frRank" : 3,

@@ -1,58 +1,22 @@
  .friend-list {
-   width: 100%;
-  max-width: 550px;
   display: flex;
   flex-direction: column;
 }
-/*
-.friend-container {
-    position: relative;
-    width: 70%;
-    margin-bottom: 30%;
-    display: flex;
-    align-items: center;
-    font-size: 35px;
-}
 
-#bg-img {
-    max-width: 600px;
-    width: 120%;
-    padding-bottom: 0;
-    height: auto;
-    position: absolute;
-    z-index: 0;
-}
-#friend-name {
-    font-size: 15px;
-    left: 0; right: 0; top: 0; bottom: 0;
-    z-index: 1;
-    margin-left: 20px;
-}
-
-#friend-img {
-    width: 75px; 
-    height: 75px;
+  #add-friend {
+    background-color: #CF2121;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
     border-radius: 50%;
-    margin-left: 20px;
-    z-index: 2;
-}
-
-#friend-info {
-    display: flex;
-    align-items: center;
+    line-height: 16px;
+    text-align: center;
     position: absolute;
-}
-
-@media screen and (min-width: 320px) {
-    #friend-name {
-      font-size: 20px;
-    }
+    right: 10px;
+    z-index: 2;
+    cursor: pointer;
   }
-  @media screen and (min-width: 1000px) {
-    #friend-name {
-      font-size: 30px;
-    }
-  }  */
 
   .friend-container {
     position: relative;
