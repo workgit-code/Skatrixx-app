@@ -16,7 +16,6 @@ function App() {
             <Route path={'/skate'} element={<SkatePage/>}/>
             <Route path={'/trophy'} element={<TrophyPage/>}/>
             <Route path={'/game'} element={<GamePage />}/>
-            
           </Routes>
           <NavBar/>
       </div>
